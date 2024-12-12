@@ -1,0 +1,11 @@
+let health = 100;
+
+function updateHealth(amount) {
+    health = Math.max(0, health + amount);
+    document.getElementById('healthValue').textContent = health;
+}
+
+// Damage from bots (for simplicity)
+setInterval(() => {
+    if (health > 0) updateHealth(-1); // Simulate taking damage over time
+}, 1000);
