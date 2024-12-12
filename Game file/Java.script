@@ -1,1 +1,17 @@
+let isLowGraphics = false;
+
+document.getElementById('toggleGraphics').addEventListener('click', () => {
+    isLowGraphics = !isLowGraphics;
+    if (isLowGraphics) {
+        renderer.setClearColor(0x000000, 1); // Set a darker background
+        scene.traverse((object) => {
+            if (object.material) object.material.wireframe = true; // Switch to wireframe for potato mode
+        });
+    } else {
+        renderer.setClearColor(0xeeeeee, 1); // Restore normal background
+        scene.traverse((object) => {
+            if (object.material) object.material.wireframe = false; // Restore solid materials
+        });
+    }
+});
 
