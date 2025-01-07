@@ -1,36 +1,51 @@
+/* Set the ocean background */
 body {
     font-family: Arial, sans-serif;
-    background-color: #87ceeb;
+    background-image: url('https://example.com/ocean-background.jpg'); /* Replace with actual ocean image URL */
+    background-size: cover;
+    background-position: center;
     text-align: center;
     padding: 20px;
     margin: 0;
+    color: white;
 }
 
+/* Style the game container */
 .game-container {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid #fff;
 }
 
+/* Style for the slot machine area */
 .slot-machine {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    border: 3px solid #fff;
+    padding: 10px;
+    background-image: url('https://example.com/realistic-slot-machine.jpg'); /* Replace with actual slot machine image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 500px;
+    height: 200px;
 }
 
 .reel {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 150px;
     margin: 0 10px;
-    background-color: #f1f1f1;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    border: 2px solid #333;
+    background-color: rgba(0, 0, 0, 0.6); /* Add slight transparency */
+    border: 2px solid #fff;
 }
 
 .controls {
@@ -62,4 +77,5 @@ button:disabled {
     font-size: 18px;
     color: #ff0000;
 }
+
 
